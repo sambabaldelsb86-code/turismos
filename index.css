@@ -1,0 +1,325 @@
+/* Reset e fonte padrão */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.pagina1 {
+    background-image: url("IMG/fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pagina2 {
+    background-image: url("IMG/paisagem.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pagina3 {
+    background-image: url("IMG/paradisiacas.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pagina4 {
+    background-image: url("IMG/por do sol.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pagina5 {
+    background-image: url("IMG/cidade de bissau.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Barra de navegação Bootstrap */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: orange;
+    color: blue;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.nav-link {
+    transition: color 0.3s, transform 0.3s;
+    font-size: 1em;
+}
+
+.nav-link:hover {
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    border-color: blue;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23003E92' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Seções de página */
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px 40px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+section .content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+
+/* Títulos e textos */
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px blue;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+
+/* Paragrafos de textos */
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px red;
+    opacity: 0;
+    text-align: justify;
+    animation: fadeIn 3s forwards;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px orange;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+}
+
+
+/* Cards com Bootstrap */
+
+.card-custom {
+    background: black !important;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+.card-custom:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.card-custom:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.card-custom:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-custom .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-custom .card-body {
+    padding: 15px;
+}
+
+.card-custom .card-title {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.card-custom .card-text {
+    font-size: 0.95em;
+}
+
+
+/* Galeria com Bootstrap Grid */
+
+.gallery-img,
+.gallery-video,
+.gallery-audio {
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-img:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.gallery-img:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.gallery-img:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.gallery-video,
+.gallery-audio {
+    display: block;
+    max-width: 100%;
+}
+
+footer {
+    font-size: 1em;
+    padding: 20px;
+    text-align: center;
+    background: blue;
+    color: white;
+}
+
+
+/* Animações */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    section {
+        padding: 90px 15px 30px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .card-custom .card-img-top {
+        height: 150px;
+    }
+    .gallery-img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+    .nav-link {
+        font-size: 0.9em;
+        padding: 0.5rem 0.5rem !important;
+    }
+    section {
+        padding: 80px 10px 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    .card-custom .card-title {
+        font-size: 1.1em;
+    }
+    .card-custom .card-text {
+        font-size: 0.85em;
+    }
+}
