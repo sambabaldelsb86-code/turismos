@@ -57,6 +57,7 @@ body {
     color: blue;
     font-size: 1em;
     display: flex;
+    border-width: 3px;
     justify-content: center;
     padding: 12px 0;
     z-index: 1000;
@@ -64,11 +65,16 @@ body {
 
 .navbar-brand {
     font-size: 1.5em;
+    border-top: 4px;
 }
 
 .nav-link {
     transition: color 0.3s, transform 0.3s;
     font-size: 1em;
+    border: 3px solid white;
+    border-radius: 50px;
+    margin: 2px;
+
 }
 
 .nav-link:hover {
